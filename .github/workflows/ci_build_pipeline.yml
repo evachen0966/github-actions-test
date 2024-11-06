@@ -46,6 +46,9 @@ jobs:
           node-version: 20.x
           cache: 'npm'
 
+      - name: Ensure Jest Permissions
+        run: chmod +x ./node_modules/.bin/jest
+
       - name: Execute Tests
         run: npm test
 
